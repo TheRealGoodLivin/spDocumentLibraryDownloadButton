@@ -38,3 +38,19 @@ In SharePoint, the best place to store a .js file is within your Site Assets (Do
 4. Add Content Editor or Script Editor Web Part to the page.
 5. Link text or paste code into script editor.
 6. Save the page.
+
+### Image Map Versions:
+#### SharePoint Online CSS:
+.downloadButton {
+   display: inline-block;
+   border: none !important;
+   width: 22px;
+   height: 21.3px;
+   cursor: pointer;
+   background-size: 374px 340px;
+   background-position: -330px -42.6px;
+   background-image: url('/_layouts/15/1033/images/formatmap32x32.png?rev=47');
+   background-repeat: no-repeat;
+   -webkit-filter: brightness(100%);
+   filter: brightness(100%);
+}
