@@ -1,2 +1,32 @@
+# LICENSE
+MIT License
+
+Copyright (c) 2021 Austin Livengood
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 # spDocumentLibraryDownloadButton
 Used to display a download button for legacy SharePoint Document Library Pages.
+
+# Notes
+ > - Purely written with HTML, CSS, and Javascript.
+ > - Uses images that can be found within SharePoint Sprites.
+
+## How To Use
+In SharePoint, the best place to store a .js file is within your Site Assets (Document Library) folder within your Site. You can use link the text file via a Content Editor or even place it in a Script Editor on the Document Library page itself.
