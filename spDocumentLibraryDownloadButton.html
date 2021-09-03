@@ -55,11 +55,13 @@
 			document.querySelectorAll('.ms-vb-lastCell').forEach(function(cell) {			
 				var row = cell.parentNode;
 				var rowLength = row.cells.length;
-				var rowNew = row.insertCell(rowLength);
-				rowNew.className = 'downloadButtonRow ' + cell.classList;
+				var rowNew;
 				if (location !== 'last') {
-					rowLength = location;
+					rowNew = row.insertCell(location);
+				} else {
+					rowNew = row.insertCell(row.cells.length);
 				}
+				rowNew.className = 'downloadButtonRow ' + cell.classList;
 				if (row.querySelectorAll('.ms-vb-icon a').length === 0) {
 					rowNew.innerHTML = '<a target="_blank" class="downloadButtonLink" href="' + siteCollection + '/_layouts/15/download.aspx?SourceUrl=' + docLinks[i]['href'] + '"><img style="border: none !important;" class="downloadButton" /></a>';
 				}
