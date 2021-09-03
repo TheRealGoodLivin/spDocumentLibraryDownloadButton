@@ -41,6 +41,7 @@ In SharePoint, the best place to store a .js file is within your Site Assets (Do
 
 ### Image Map Versions:
 #### SharePoint Online CSS:
+```CSS
 <style>
  .downloadButton {
    display: inline-block;
@@ -56,3 +57,4 @@ In SharePoint, the best place to store a .js file is within your Site Assets (Do
    filter: brightness(100%);
  }
 </style>
+```
