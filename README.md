@@ -27,6 +27,14 @@ Used to display a download button for legacy SharePoint Document Library Pages.
 # Notes
  > - Purely written with HTML, CSS, and Javascript.
  > - Uses images that can be found within SharePoint Sprites.
+ > - This will only show a download button on files and not folders.
 
 ## How To Use
 In SharePoint, the best place to store a .js file is within your Site Assets (Document Library) folder within your Site. You can use link the text file via a Content Editor or even place it in a Script Editor on the Document Library page itself.
+
+1. Upload text file within your sites 'Site Assets' folder. 
+2. Open Document Library that you wish to add Download Button too.
+3. Edit Page.
+4. Add Content Editor or Script Editor Web Part to the page.
+5. Link text or paste code into script editor.
+6. Save the page.
