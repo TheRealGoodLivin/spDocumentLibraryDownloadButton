@@ -58,3 +58,41 @@ In SharePoint, the best place to store a .js file is within your Site Assets (Do
  }
 </style>
 ```
+
+#### SharePoint 2016 CSS:
+```CSS
+<style>
+ .downloadButton {
+   display: inline-block;
+   border: none !important;
+   width: 22px;
+   height: 21.3px;
+   cursor: pointer;
+   background-size: 374px 340px;
+   background-position: -330px -21.3px;
+   background-image: url('/_layouts/15/1033/images/formatmap32x32.png?rev=40');
+   background-repeat: no-repeat;
+   -webkit-filter: brightness(100%);
+   filter: brightness(100%);
+ }
+</style>
+```
+
+#### SharePoint 2013 CSS:
+```CSS
+<style>
+ .downloadButton {
+   display: inline-block;
+   border: none !important;
+   width: 22px;
+   height: 21.3px;
+   cursor: pointer;
+   background-size: 374px 340px;
+   background-position: -211px -298px;
+   background-image: url('/_layouts/15/1033/images/formatmap32x32.png?rev=40');
+   background-repeat: no-repeat;
+   -webkit-filter: brightness(100%);
+   filter: brightness(100%);
+ }
+</style>
+```
