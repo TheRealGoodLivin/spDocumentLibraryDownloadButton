@@ -1,0 +1,49 @@
+<style>
+	.downloadButtonRow, .downloadButtonLink {
+		border: none !important;
+		text-decoration:none !important;
+	}
+	.downloadButton {
+		display: inline-block;
+		border: none !important;
+		width: 22px;
+  		height: 21.3px;
+		cursor: pointer;
+		background-size: 374px 340px;
+		background-position: -330px -42.6px;
+		background-image: url('/_layouts/15/1033/images/formatmap32x32.png?rev=47');
+		background-repeat: no-repeat;
+		-webkit-filter: brightness(100%);
+		filter: brightness(100%);
+	}
+	.downloadButton:hover {
+		-webkit-filter: brightness(50%);
+		filter: brightness(50%);
+	}
+</style>
+
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		function libraryDownloadButton(location = 'last') {
+			var siteCollection = window.location.protocol + '//' + window.location.host + _spPageContextInfo.siteServerRelativeUrl;
+			var docLinks = document.getElementsByClassName('ms-listlink');
+			var i = 0;
+	
+			document.querySelectorAll('.ms-vb-lastCell').forEach(function(cell) {			
+				var row = cell.parentNode;
+				var rowLength = row.cells.length;
+				var rowNew = row.insertCell(rowLength);
+				rowNew.className = 'downloadButtonRow ' + cell.classList;
+				if (location !== 'last') {
+					rowLength = location;
+				}
+				if (row.querySelectorAll('.ms-vb-icon a').length === 0) {
+					rowNew.innerHTML = '<a target="_blank" class="downloadButtonLink" href="' + siteCollection + '/_layouts/15/download.aspx?SourceUrl=' + docLinks[i]['href'] + '"><img style="border: none !important;" class="downloadButton" /></a>';
+				}
+				i++;
+			});
+		}
+
+		libraryDownloadButton();
+	});
+</script>
