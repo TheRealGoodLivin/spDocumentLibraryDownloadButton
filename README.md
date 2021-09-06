@@ -33,7 +33,7 @@ Used to display a download button for legacy SharePoint Document Library Pages.
  > - - spDocumentLibraryDownloadButtonSelective: Used for setting the download button to specific library that can be found on your page.
 
 ## How To Use
-In SharePoint, the best place to store a .js file is within your Site Assets (Document Library) folder within your Site. You can use link the text file via a Content Editor or even place it in a Script Editor on the Document Library page itself.
+In SharePoint, the best place to store a these files are within your SiteAssets Document Library. They can be saved as an .html or .txt. You will link this directly to your html/text file via a Content Editor or even place the code in a Script Editor on the Document Library page itself.
 
 1. Upload text file within your sites 'Site Assets' folder. 
 2. Open Document Library that you wish to add Download Button too.
