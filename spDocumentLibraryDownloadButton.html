@@ -99,7 +99,27 @@
 		}
 	}
 	
-	document.addEventListener('DOMContentLoaded', function() {		
+	function checkEditMode() {
+		var inEditMode = false;
+		if(document.forms[MSOWebPartPageFormName].MSOLayout_InDesignMode != null) {	
+			if (document.forms[MSOWebPartPageFormName].MSOLayout_InDesignMode.value == '1') {
+				inEditMode = true;
+			}
+		}
+	
+		if(document.forms[MSOWebPartPageFormName]._wikiPageMode != null) {
+			if (document.forms[MSOWebPartPageFormName]._wikiPageMode.value == "Edit") {
+				inEditMode = true;
+			}
+		}
+		return inEditMode;
+	}
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		if (checkEditMode() == true) {
+        		return;
+		}
+		
 		libraryDownloadButton('last'); //Or put column row where you would like it to display (1)
 	});
 </script>
