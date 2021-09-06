@@ -86,8 +86,8 @@
 		if (selectedWebParts.length != 0) {
 			for (var a = 0; a < selectedWebParts.length; a++) {
 				for (var b = 0; b < webParts.length; b++) {
-					if (selectedWebParts[b] == webParts[a].innerText) {
-						var libraryParent = webParts[a].parentNode.parentNode.parentNode.parentNode;
+					if (selectedWebParts[a] == webParts[b].innerText) {
+						var libraryParent = webParts[b].parentNode.parentNode.parentNode.parentNode;
 						var rowDocLinks = libraryParent.querySelectorAll('.ms-listlink');
 						var rowLastCells = libraryParent.querySelectorAll('.ms-vb-lastCell');
 						
