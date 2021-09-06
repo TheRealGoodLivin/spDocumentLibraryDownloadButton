@@ -79,28 +79,27 @@
 </style>
 
 <script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-		function libraryDownloadButton(location = 'last') {
-			var siteCollection = window.location.protocol + '//' + window.location.host + _spPageContextInfo.siteServerRelativeUrl;
-			var docLinks = document.getElementsByClassName('ms-listlink');
-			var i = 0;
-	
-			document.querySelectorAll('.ms-vb-lastCell').forEach(function(cell) {			
-				var row = cell.parentNode;
-				var rowNew;
-				if (location !== 'last') {
-					rowNew = row.insertCell(location);
-				} else {
-					rowNew = row.insertCell(row.cells.length);
-				}
-				rowNew.className = 'downloadButtonRow ' + cell.classList;
-				if (row.querySelectorAll('.ms-vb-icon a').length === 0) {
-					rowNew.innerHTML = '<a target="_blank" class="downloadButtonLink" href="' + siteCollection + '/_layouts/15/download.aspx?SourceUrl=' + docLinks[i]['href'] + '"><img style="border: none !important;" class="downloadButton" /></a>';
-				}
-				i++;
-			});
+	function libraryDownloadButton(colLocation = 'last') {
+		var siteCollection = window.location.protocol + '//' + window.location.host + _spPageContextInfo.siteServerRelativeUrl;
+		var rowDocLinks = document.querySelectorAll('.ms-listlink');
+		var rowLastCells = document.querySelectorAll('.ms-vb-lastCell');
+						
+		for (var a = 0; a < rowLastCells.length; a++) {
+			var row = rowLastCells[a].parentNode;
+			var rowNew;
+			if (colLocation !== 'last') {
+				rowNew = row.insertCell(colLocation);
+			} else {
+				rowNew = row.insertCell(row.cells.length);
+			}
+			rowNew.className = 'downloadButtonRow ' + rowLastCells[a].classList;
+			if (row.querySelectorAll('.ms-vb-icon a').length === 0) {
+				rowNew.innerHTML = '<a target="_blank" class="downloadButtonLink" href="' + siteCollection + '/_layouts/15/download.aspx?SourceUrl=' + rowDocLinks[a]['href'] + '"><img style="border: none !important;" class="downloadButton" /></a>';	
+			}
 		}
-
-		libraryDownloadButton();
+	}
+	
+	document.addEventListener('DOMContentLoaded', function() {		
+		libraryDownloadButton('last'); //Or put column row where you would like it to display (1)
 	});
 </script>
