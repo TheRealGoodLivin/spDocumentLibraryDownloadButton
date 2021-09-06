@@ -25,12 +25,12 @@ SOFTWARE.
 Used to display a download button for legacy SharePoint Document Library Pages.
 
 # Notes
- > Purely written with HTML, CSS, and Javascript.
- > Uses images that can be found within SharePoint Sprites.
- > This will only show a download button on files and not folders.
- > Two Versions.
- > - spDocumentLibraryDownloadButton: Used for direct use with your document library page.
- > - spDocumentLibraryDownloadButtonSelective: Used for setting the download button to specific library that can be found on your page.
+ > - Purely written with HTML, CSS, and Javascript.
+ > - Uses images that can be found within SharePoint Sprites.
+ > - This will only show a download button on files and not folders.
+ > - Two Versions.
+ > - - spDocumentLibraryDownloadButton: Used for direct use with your document library page.
+ > - - spDocumentLibraryDownloadButtonSelective: Used for setting the download button to specific library that can be found on your page.
 
 ## How To Use
 In SharePoint, the best place to store a .js file is within your Site Assets (Document Library) folder within your Site. You can use link the text file via a Content Editor or even place it in a Script Editor on the Document Library page itself.
