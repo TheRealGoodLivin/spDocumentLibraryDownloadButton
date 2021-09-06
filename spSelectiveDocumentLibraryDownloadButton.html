@@ -1,0 +1,61 @@
+<style>
+	.downloadButtonRow, .downloadButtonLink {
+		border: none !important;
+		text-decoration: none !important;
+	}
+	.downloadButton {
+		display: inline-block;
+		border: none !important;
+		width: 22px;
+		height: 21.3px;
+		cursor: pointer;
+		background-size: 374px 340px;
+		background-position: -330px -42.6px;
+		background-image: url('/_layouts/15/1033/images/formatmap32x32.png?rev=47');
+		background-repeat: no-repeat;
+		-webkit-filter: brightness(100%);
+		filter: brightness(100%);
+	}
+	.downloadButton:hover {
+		-webkit-filter: brightness(50%);
+		filter: brightness(50%);
+	}
+</style>
+
+<script type="text/javascript">
+	function selectiveLibraryDownloadButton(selectedWebParts, colLocation = 'last') {
+		var siteCollection = window.location.protocol + '//' + window.location.host + _spPageContextInfo.siteServerRelativeUrl;
+		var webParts = document.querySelectorAll('[id*=WebPartTitleWP]');
+
+		if (selectedWebParts.length != 0) {
+			for (var a = 0; a < selectedWebParts.length; a++) {
+				for (var b = 0; b < webParts.length; b++) {
+					if (selectedWebParts[b] == webParts[a].innerText) {
+						var libraryParent = webParts[a].parentNode.parentNode.parentNode.parentNode;
+						var rowDocLinks = libraryParent.querySelectorAll('.ms-listlink');
+						var rowLastCells = libraryParent.querySelectorAll('.ms-vb-lastCell');
+						
+						for (var c = 0; c < rowLastCells.length; c++) {
+							var row = rowLastCells[c].parentNode;
+							var rowNew;
+							if (colLocation !== 'last') {
+								rowNew = row.insertCell(colLocation);
+							} else {
+								rowNew = row.insertCell(row.cells.length);
+							}
+							rowNew.className = 'downloadButtonRow ' + rowLastCells[c].classList;
+							if (row.querySelectorAll('.ms-vb-icon a').length === 0) {
+								rowNew.innerHTML = '<a target="_blank" class="downloadButtonLink" href="' + siteCollection + '/_layouts/15/download.aspx?SourceUrl=' + rowDocLinks[c]['href'] + '"><img style="border: none !important;" class="downloadButton" /></a>';	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	document.addEventListener('DOMContentLoaded', function() {		
+		var selectedWebParts = [ 'Documents' , 'Site Assets' ];
+		selectiveLibraryDownloadButton(selectedWebParts, 'last');
+	});
+</script>
